@@ -2,10 +2,7 @@ class PlayersController < ApplicationController
   def index
     @players = Player.find(:all)
   end
-  
-  def show
-    @player = Player.find(params[:id])
-  end
+
   
   def new
     @player = Player.new
@@ -15,7 +12,7 @@ class PlayersController < ApplicationController
     @player = Player.new(params[:player])
     if @player.save
       flash[:notice] = "Successfully created player."
-      redirect_to @player
+      redirect_to players_path
     else
       render :action => 'new'
     end
@@ -29,7 +26,7 @@ class PlayersController < ApplicationController
     @player = Player.find(params[:id])
     if @player.update_attributes(params[:player])
       flash[:notice] = "Successfully updated player."
-      redirect_to @player
+      redirect_to players_path
     else
       render :action => 'edit'
     end
