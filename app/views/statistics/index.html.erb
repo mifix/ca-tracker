@@ -1,0 +1,52 @@
+<% title "Statistics for #{@player.name}" %>
+
+<%= link_to "Back to players", players_path %> <br /> <hr />
+
+<table class='stats'>
+  <tr>
+    <th>Rank</th>
+    <th>Kd</th>
+    <th>Exp</th>
+    <th>Gp</th>
+    <th>Kills</th>
+    <th>Deaths</th>
+    <th>Headshots</th>
+    <th>Matches</th>
+    <th>Matches Won</th>
+    <th>Matches Lost</th>
+    <th>Matches Forfeited</th>
+    <th>Kills Per Match</th>
+    <th>Deaths Per Match</th>
+    <th>Kill Streak</th>
+    <th>Multi Kills</th>
+    <th>Ultra Kills</th>
+    <th>Fantastic</th>
+    <th>Unbelievable</th>
+    <th>Unbelievable Plus</th>
+  </tr>
+  <% for statistic in @statistics %>
+    <tr>
+      <td><%=h statistic.rank %></td>
+      <td><%=h statistic.kd %></td>
+      <td><%=h statistic.exp %></td>
+      <td><%=h statistic.gp %></td>
+      <td><%=h statistic.kills %></td>
+      <td><%=h statistic.deaths %></td>
+      <td><%=h statistic.headshots %></td>
+      <td><%=h statistic.matches %></td>
+      <td><%=h statistic.matches_won %></td>
+      <td><%=h statistic.matches_lost %></td>
+      <td><%=h statistic.matches_forfeited %></td>
+      <td><%=h statistic.kills_per_match %></td>
+      <td><%=h statistic.deaths_per_match %></td>
+      <td><%=h statistic.kill_streak %></td>
+      <td><%=h statistic.multi_kills %></td>
+      <td><%=h statistic.ultra_kills %></td>
+      <td><%=h statistic.fantastic %></td>
+      <td><%=h statistic.unbelievable %></td>
+      <td><%=h statistic.unbelievable_plus %></td>
+    </tr>
+  <% end %>
+</table>
+
+

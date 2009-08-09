@@ -1,0 +1,41 @@
+one:
+  rank: 1
+  kd: 1.5
+  exp: 1
+  gp: 1
+  kills: 1
+  deaths: 1
+  headshots: 1
+  matches: 1
+  matches_won: 1
+  matches_lost: 1
+  matches_forfeited: 1
+  kills_per_match: 1.5
+  deaths_per_match: 1.5
+  kill_streak: 1
+  multi_kills: 1
+  ultra_kills: 1
+  fantastic: 1
+  unbelievable: 1
+  unbelievable_plus: 1
+
+two:
+  rank: 1
+  kd: 1.5
+  exp: 1
+  gp: 1
+  kills: 1
+  deaths: 1
+  headshots: 1
+  matches: 1
+  matches_won: 1
+  matches_lost: 1
+  matches_forfeited: 1
+  kills_per_match: 1.5
+  deaths_per_match: 1.5
+  kill_streak: 1
+  multi_kills: 1
+  ultra_kills: 1
+  fantastic: 1
+  unbelievable: 1
+  unbelievable_plus: 1
