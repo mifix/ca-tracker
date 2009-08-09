@@ -13,6 +13,8 @@ class StatisticFetcher
   protected
     
   def prepare_scraper
+    Scraper::Base.parser :html_parser
+  
     @scraper = Scraper.define do
       process "dd:nth-child(6)", :rank => :text
       process "dd:nth-child(8)", :kd => :text 
