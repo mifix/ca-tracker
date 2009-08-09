@@ -78,3 +78,28 @@ a {
   font-size: 12px;
   list-style: disc;
 }
+
+table.stats {
+	border-width: 2px 2px 2px 2px;
+	border-spacing: 2px;
+	border-style: solid solid solid solid;
+	border-color: gray gray gray gray;
+	border-collapse: collapse;
+	background-color: white;
+}
+table.stats th {
+	border-width: 1px 1px 1px 1px;
+	padding: 1px 1px 1px 1px;
+	border-style: dashed dashed dashed dashed;
+	border-color: gray gray gray gray;
+	background-color: white;
+	-moz-border-radius: 3px 3px 3px 3px;
+}
+table.stats td {
+	border-width: 1px 1px 1px 1px;
+	padding: 1px 1px 1px 1px;
+	border-style: dashed dashed dashed dashed;
+	border-color: gray gray gray gray;
+	background-color: white;
+	-moz-border-radius: 3px 3px 3px 3px;
+}
