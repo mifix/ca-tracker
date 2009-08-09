@@ -37,7 +37,7 @@ class StatisticFetcher
       process "#divTab3 li:nth-child(4) span", :unbelievable => :text
       process "#divTab3 li:nth-child(5) span", :unbelievable_plus => :text
       
-      result :rank, :kd, :exp, :gp, :kills, :deaths, :headshots, :matches_won, :matches_lost, :matches_forfeited, :kills_per_match, :deaths_per_match, :kill_streak, :multi_kills, :ultra_kills, :fantastic, :unbelievable, :unbelievable_plus
+      result :rank, :kd, :exp, :gp, :kills, :deaths, :headshots, :matches, :matches_won, :matches_lost, :matches_forfeited, :kills_per_match, :deaths_per_match, :kill_streak, :multi_kills, :ultra_kills, :fantastic, :unbelievable, :unbelievable_plus
     end
   end
   
