@@ -1,0 +1,14 @@
+log/*.log
+tmp/**/*
+config/database.yml
+db/*.sqlite3
+tmp/
+coverage/
+features_report.html
+*/.DS_Store
+**/*/.DS_Store
+vendor/plugins/cucumber_growler/
+coverage.data
+tmtags
+changelog-tmp
+db/backup/*
