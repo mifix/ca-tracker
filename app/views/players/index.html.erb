@@ -1,0 +1,16 @@
+<% title "Players" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for player in @players %>
+    <tr>
+      <td><%=h player.name %></td>
+      <td><%= link_to "Show", player %></td>
+      <td><%= link_to "Edit", edit_player_path(player) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Player", new_player_path %></p>
