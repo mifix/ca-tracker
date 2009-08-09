@@ -23,6 +23,7 @@ class StatisticFetcher
       process "#divTab1 .first span", :kills => :text
       process "#divTab1 li:nth-child(2) span", :deaths => :text
       process "#divTab1 li:nth-child(4) span", :headshots => :text
+      process "#divTab1 li:nth-child(5) span", :matches => :text
       process "#divTab1 li:nth-child(6) span", :matches_won => :text
       process "#divTab1 li:nth-child(7) span", :matches_lost => :text
       process "#divTab1 li:nth-child(8) span", :matches_forfeited => :text
