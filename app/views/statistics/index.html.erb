@@ -12,40 +12,106 @@
     <th>Deaths</th>
     <th>Headshots</th>
     <th>Matches</th>
-    <th>Matches Won</th>
-    <th>Matches Lost</th>
-    <th>Matches Forfeited</th>
-    <th>Kills Per Match</th>
-    <th>Deaths Per Match</th>
-    <th>Kill Streak</th>
-    <th>Multi Kills</th>
-    <th>Ultra Kills</th>
-    <th>Fantastic</th>
-    <th>Unbelievable</th>
-    <th>Unbelievable Plus</th>
+    <th>Won</th>
+    <th>Lost</th>
+    <th>Forfeited</th>
+    <th>Kills/Match</th>
+    <th>Deaths/Match</th>
+    <th>Streak</th>
+    <th>Multi</th>
+    <th>Ultra</th>
+    <th>Fanta</th>
+    <th>Unbev</th>
+    <th>Unbev +</th>
+    <th>created</th>
   </tr>
+  <% previous_stats = Statistic.new %>
   <% for statistic in @statistics %>
-    <tr>
-      <td><%=h statistic.rank %></td>
-      <td><%=h statistic.kd %></td>
-      <td><%=h statistic.exp %></td>
-      <td><%=h statistic.gp %></td>
-      <td><%=h statistic.kills %></td>
-      <td><%=h statistic.deaths %></td>
-      <td><%=h statistic.headshots %></td>
-      <td><%=h statistic.matches %></td>
-      <td><%=h statistic.matches_won %></td>
-      <td><%=h statistic.matches_lost %></td>
-      <td><%=h statistic.matches_forfeited %></td>
-      <td><%=h statistic.kills_per_match %></td>
-      <td><%=h statistic.deaths_per_match %></td>
-      <td><%=h statistic.kill_streak %></td>
-      <td><%=h statistic.multi_kills %></td>
-      <td><%=h statistic.ultra_kills %></td>
-      <td><%=h statistic.fantastic %></td>
-      <td><%=h statistic.unbelievable %></td>
-      <td><%=h statistic.unbelievable_plus %></td>
+    <tr class=<%= cycle('even', 'odd') %>>
+      <td>
+        <%=h statistic.rank %>
+        <%= format_progress(statistic, previous_stats, :rank) %>
+      </td>
+      <td>
+        <%=h statistic.kd %>
+        <% previous_kills = previous_stats.kills || 0 %>
+        <% kill_diff = statistic.kills - previous_kills %>
+        
+        <% previous_deaths = previous_stats.deaths || 0 %>
+        <% death_diff = statistic.deaths - previous_deaths %>
+        <%= format_value(kill_diff / death_diff.to_f) %>
+      </td>
+      <td>
+        <%=h statistic.exp %>
+        <%= format_progress(statistic, previous_stats, :exp) %>
+      </td>
+      <td>
+        <%=h statistic.gp %>
+        <%= format_progress(statistic, previous_stats, :gp) %>
+      </td>
+      <td>
+        <%=h statistic.kills %>
+        <%= format_progress(statistic, previous_stats, :kills) %>
+      </td>
+      <td>
+        <%=h statistic.deaths %>
+        <%= format_progress(statistic, previous_stats, :deaths) %>
+      </td>
+      <td>
+        <%=h statistic.headshots %>
+        <%= format_progress(statistic, previous_stats, :headshots) %>
+      </td>
+      <td>
+        <%=h statistic.matches %>
+        <%= format_progress(statistic, previous_stats, :matches) %>
+      </td>
+      <td>
+        <%=h statistic.matches_won %>
+        <%= format_progress(statistic, previous_stats, :matches_won) %>
+      </td>
+      <td>
+        <%=h statistic.matches_lost %>
+        <%= format_progress(statistic, previous_stats, :matches_lost) %>
+      </td>
+      <td>
+        <%=h statistic.matches_forfeited %>
+        <%= format_progress(statistic, previous_stats, :matches_forfeited) %>
+      </td>      
+      <td>
+        <%=h statistic.kills_per_match %>
+        <%= format_progress(statistic, previous_stats, :kills_per_match) %>
+      </td>
+      <td>
+        <%=h statistic.deaths_per_match %>
+        <%= format_progress(statistic, previous_stats, :deaths_per_match) %>
+      </td>
+      <td>
+        <%=h statistic.kill_streak %>
+        <%= format_progress(statistic, previous_stats, :kill_streak) %>
+      </td>
+      <td>
+        <%=h statistic.multi_kills %>
+        <%= format_progress(statistic, previous_stats, :multi_kills) %>
+      </td>
+      <td>
+        <%=h statistic.ultra_kills %>
+        <%= format_progress(statistic, previous_stats, :ultra_kills) %>
+      </td>
+      <td>
+        <%=h statistic.fantastic %>
+        <%= format_progress(statistic, previous_stats, :fantastic) %>
+      </td>
+      <td>
+        <%=h statistic.unbelievable %>
+        <%= format_progress(statistic, previous_stats, :unbelievable) %>
+      </td>
+      <td>
+        <%=h statistic.unbelievable_plus %>
+        <%= format_progress(statistic, previous_stats, :unbelievable_plus) %>
+      </td>
+      <td><%= statistic.created_at.to_s(:short) %></td>
     </tr>
+    <% previous_stats = statistic %>
   <% end %>
 </table>
 

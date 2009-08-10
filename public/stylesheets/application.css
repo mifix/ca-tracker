@@ -87,19 +87,34 @@ table.stats {
 	border-collapse: collapse;
 	background-color: white;
 }
+
+.even > td {
+  background-color: #b2f2c7;
+}
+
+
 table.stats th {
 	border-width: 1px 1px 1px 1px;
-	padding: 1px 1px 1px 1px;
+	padding: 5px 5px 5px 5px;
 	border-style: dashed dashed dashed dashed;
 	border-color: gray gray gray gray;
 	background-color: white;
 	-moz-border-radius: 3px 3px 3px 3px;
 }
+
 table.stats td {
+  text-align: center;
 	border-width: 1px 1px 1px 1px;
-	padding: 1px 1px 1px 1px;
+	padding: 5px 5px 5px 5px;
 	border-style: dashed dashed dashed dashed;
 	border-color: gray gray gray gray;
-	background-color: white;
 	-moz-border-radius: 3px 3px 3px 3px;
+}
+
+.pos {
+  color: green;
+}
+
+.neg {
+  color: red;
 }
