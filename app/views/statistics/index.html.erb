@@ -79,11 +79,13 @@
       </td>      
       <td>
         <%=h statistic.kills_per_match %>
-        <%= format_progress(statistic, previous_stats, :kills_per_match) %>
+        <% previous_matches = previous_stats.matches || 0 %>
+        <% matches_diff = statistic.matches - previous_matches %>
+        <%= format_value(kill_diff / matches_diff) if matches_diff > 0 %> 
       </td>
       <td>
         <%=h statistic.deaths_per_match %>
-        <%= format_progress(statistic, previous_stats, :deaths_per_match) %>
+        <%= format_value(death_diff / matches_diff) if matches_diff > 0 %>
       </td>
       <td>
         <%=h statistic.kill_streak %>
