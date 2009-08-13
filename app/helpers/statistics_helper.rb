@@ -22,7 +22,7 @@ module StatisticsHelper
 
   def format_number(value)
     if value.class == Float
-      number_with_precision(value, 2) 
+      number_with_precision(value, :precision => 2) 
     else
       value
     end
