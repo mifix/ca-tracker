@@ -89,6 +89,9 @@ table.stats {
   background-color: #b2f2c7;
 }
 
+table.stats th {
+  white-space: nowrap;
+}
 
 table.stats th,
 table.stats td {
