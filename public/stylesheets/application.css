@@ -1,7 +1,7 @@
 body {
   background-color: #4B7399;
   font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
+  font-size: small;
 }
 
 a img {
@@ -61,7 +61,7 @@ a {
   text-align: left;
   font-weight: bold;
   padding: 5px 5px 5px 15px;
-  font-size: 12px;
+  font-size: small;
   margin: 0px;
   background-color: #c00;
   color: #fff;
@@ -75,17 +75,14 @@ a {
   margin: 2px 24px;
 }
 #errorExplanation ul li {
-  font-size: 12px;
+  font-size: small;
   list-style: disc;
 }
 
 table.stats {
-	border-width: 2px 2px 2px 2px;
-	border-spacing: 2px;
-	border-style: solid solid solid solid;
-	border-color: gray gray gray gray;
-	border-collapse: collapse;
-	background-color: white;
+  border: 2px solid #000;
+  border-collapse: collapse;
+  background-color: white;
 }
 
 .even > td {
@@ -93,22 +90,12 @@ table.stats {
 }
 
 
-table.stats th {
-	border-width: 1px 1px 1px 1px;
-	padding: 5px 5px 5px 5px;
-	border-style: dashed dashed dashed dashed;
-	border-color: gray gray gray gray;
-	background-color: white;
-	-moz-border-radius: 3px 3px 3px 3px;
-}
-
+table.stats th,
 table.stats td {
+  border: 1px dashed gray;
+  padding: 5px;
   text-align: center;
-	border-width: 1px 1px 1px 1px;
-	padding: 5px 5px 5px 5px;
-	border-style: dashed dashed dashed dashed;
-	border-color: gray gray gray gray;
-	-moz-border-radius: 3px 3px 3px 3px;
+  font-size: smaller;
 }
 
 .pos {
