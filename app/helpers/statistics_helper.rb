@@ -7,17 +7,17 @@ module StatisticsHelper
     current.send(attr) - prev_value
   end
   
-  def format_progress(current, previous, attr)
+  def format_progress(current, previous, attr, inv_format=false)
     val = progress(current, previous, attr)
-    format_value(val)
+    format_value(val, inv_format)
   end
   
-  def format_value(value)
-    if value > 0
-      "<div class='pos'>#{format_number(value)}</div>"
-    elsif value < 0
-      "<div class='neg'>#{format_number(value)}</div>"
+  def format_value(value, inv_format=false)
+    sign = "pos"
+    if (value < 0 && !inv_format) || (value > 0 && inv_format)
+      sign = "neg"
     end
+    "<span class='#{sign}'>#{format_number(value)}</span>"
   end
 
   def format_number(value)
